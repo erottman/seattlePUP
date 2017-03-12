@@ -35,7 +35,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-            <a class="navbar-brand" href="#">seaPUP</a>
+            <a class="navbar-brand" href="#">seattlePUP</a>
           </div>
 
           <div id="navbar" class="navbar-collapse collapse">
@@ -110,30 +110,57 @@
 
   <div class="row">
 
-    <div class="col-sm-4 text-center">
-      <img class="img-circle" src="img/zillabeach.jpg" alt="Breed Match" width="140" height="140">
-      <h2>License Status Form</h2>
-      <p>Check current status of your pet's license</p>
-      <p>Placeholder for form</p>
-      <p>Placeholder for api data</p>
-    </div>
-
-    <div class="col-sm-4 text-center">
-      <img class="img-circle" src="img/guvypic.jpg" alt="Breed Match" width="140" height="140">
-      <h2>License Status Return</h2>
-      <p>Check current status of your pet's license</p>
-      <p>Placeholder for form</p>
-      <p>Placeholder for api data</p>
-    </div>
-
-    <div class="col-sm-4 text-center">
-      <img class="img-circle" src="img/guvysleep.jpg" alt="Location" width="140" height="140">
-      <h2>License Sales</h2>
-      <p>Placeholder for api data</p>
-      <p>Placeholder for form?</p>
-    </div>
+    <div class="col-sm-6 text-center">
+      <h2>Why License Your Dog</h2>
+    <img class="img-rounded" src="img/police.jpg" alt="License Check" width="140" height="140">
+    <ul class="list-group">
+        <li class="list-group-item">Fine $200</li>
+        <li class="list-group-item">Safe Return</li>
+        <li class="list-group-item">It's The Law</li>
+    </ul>
 
   </div>
+
+      <div class="col-sm-6 text-center">
+        <h2>ID Check</h2>
+      <img class="img-circle" src="img/dogLicense.jpg" alt="License Check" width="140" height="140">
+
+
+        <form id="licenseSearch" method="post" class="form-horizontal">
+            <div class="form-group">
+                <label for="animal_s_name" class="control-label">Pet Name:</label>
+                    <input type="text" class="form-control" name="animal_s_name" value="Godzilla" id="animal_s_name">
+
+            </div>
+
+            <div id="extraFilters" class="hidden">
+                <div class="form-group">
+                    <label for="zip_code" class="control-label">Postal Code:</label>
+                        <input type="text" class="form-control" name="zip_code" id="zip_code">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="primary_breed" class="control-label">Breed:</label>
+                        <select class="form-control" id="primary_breed" name="primary_breed">
+                      </select>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                    <button type="submit" class="btn btn-default">Submit</button>
+                <!-- </div> -->
+            </div>
+        </form>
+        <div class="alert alert-warning hidden" id="warning-alert">
+            Your Dog isn't licensed Tisk Tisk.
+        </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- /License ----------------------->
     <!-- Dog Name Dog Breeds ----------------------->
