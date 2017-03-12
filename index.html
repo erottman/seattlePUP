@@ -134,37 +134,53 @@
             </div>
 
             <div id="extraFilters" class="hidden">
+
                 <div class="form-group">
                     <label for="zip_code" class="control-label">Postal Code:</label>
-                        <input type="text" class="form-control" name="zip_code" id="zip_code">
-                </div>
-
+                        <select class="form-control" id="zip_code" name="zip_code">
+                          <option value="" selected disabled>Please select</option>
+                      </select>
+                  </div>
 
                 <div class="form-group">
                     <label for="primary_breed" class="control-label">Breed:</label>
                         <select class="form-control" id="primary_breed" name="primary_breed">
+                          <option value="" selected disabled>Please select</option>
                       </select>
+                    </div>
 
-                </div>
-            </div>
+                  <div id="extraFiltersTwo" class="hidden">
+
+                      <div class="form-group">
+                          <label for="license_number" class="control-label">License Number:</label>
+                              <select class="form-control" id="license_number" name="license_number">
+                            </select>
+                          </div>
+
+                      <div class="form-group">
+                          <label for="license_issue_date" class="control-label">Issue Date:</label>
+                              <select class="form-control" id="license_issue_date" name="license_issue_date">
+
+                            </select>
+                        </div>
+                      </div>
+                      </div>
 
             <div class="form-group">
-                    <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" class="btn btn-default">Submit</button>
             </div>
         </form>
+
         <div class="alert alert-warning hidden" id="warning-alert">
-            Looks like you got a fugitive-Click Here to register your puppy today
-            <a href="http://blue.kingcounty.gov/exec/recordslicensing/petlicenses/">
+            <p>Looks like you got a fugitive-Click Here to register your puppy today
+            <a href="http://blue.kingcounty.gov/exec/recordslicensing/petlicenses/"></p>
         </div>
         <div class="alert alert-warning hidden" id="multiple-results">
-            While your puppy is unique -their name is not please select a Zip and Breed.
-            <a href="http://blue.kingcounty.gov/exec/recordslicensing/petlicenses/">
+            Every puppy is unique - but sometimes names are not. Please select a Zip and Breed.
         </div>
+
         <div class="alert alert-warning hidden" id="match-results">
           <p>Your Puppy is Street Legal</p>
-          <p id="#license_number"></p>
-          <p id="#license_issue_date"></p>
-
         </div>
     </div>
   </div>
@@ -174,30 +190,16 @@
   <!-- /License ----------------------->
 
 <!-- Offleash & Resources ----------------------->
+<hr></hr>
 
-<hr class="featurette-divider">
+<div class="row">
 
-<div class="row featurette">
-  <div class="col-md-7 text-center">
-    <h2 class="featurette-heading">Off-Leash Parks</h2>
-    <p>Off-Leash Parks of Seattle</p>
+  <div class="col-sm-12 text-center" id="offLeashContainer">
+    <h2>Seattle Off-Leash</h2>
   </div>
-  <div class="col-md-5 text-center">
-    <img class="img-circle" src="https://www.bringfido.com/map/-122.347276/47.620973/12/r/attraction/parks/city/seattle_wa_us/l/" alt="Location" width="140" height="140">
 </div>
 </div>
 
-<hr class="featurette-divider">
-
-<div class="row featurette">
-<div class="col-md-7 col-md-push-5 text-center">
-  <h2 class="featurette-heading">Resources</h2>
-  <p>Groomers to Organic Food Stores</p>
-</div>
-<div class="col-md-5 col-md-pull-7 text-center">
-  <img class="img-circle" src="https://www.bringfido.com/map/-122.347276/47.620973/12/r/attraction/parks/city/seattle_wa_us/l/" alt="Location" width="140" height="140">
-</div>
-</div>
 
 <!-- /Offleash & Resources ----------------------->
 <!-- footer ----------------------->
