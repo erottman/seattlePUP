@@ -1,5 +1,6 @@
 const LICENSE_API_URL= "https://data.seattle.gov/resource/87w5-fd6d.json?species=Dog";
 const OFF_LEASH_API_URL="https://data.seattle.gov/resource/5tqj-tg8y.json"
+const LICENSE_SALES_API_URL="https://data.seattle.gov/resource/yef9-cfuw.json"
 
 
 $().ready(function() {
@@ -7,6 +8,7 @@ $().ready(function() {
 
   let form = $("#licenseSearch");
   getOffLeashAreas();
+  getLicensingStores();
   form.on("submit", function(event) {
     event.preventDefault();
 
@@ -65,3 +67,20 @@ function getOffLeashAreas() {
       }
     })
 }
+
+
+
+function getLicensingStores() {
+  $.get(LICENSE_SALES_API_URL, function(data) {
+
+  })
+    .done(function(data){
+      console.log(data)
+      for(let i = 0; i < data.length; i++) {
+        $("#petLicenseSales").append('<address><strong>'+ data[i].common_name+'</strong><br>'
+        + data[i].address + '<br>'
+        + data[i].website.url + '<br><a href="https://www.google.com/maps/preview/@'
+        + data[i].latitude +','+ data[i].longitude +'" target="_blank">Map</a></address>')
+      }
+    })
+  }
