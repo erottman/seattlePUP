@@ -9,6 +9,11 @@ $().ready(function() {
   let form = $("#licenseSearch");
   getOffLeashAreas();
   getLicensingStores();
+  $('#reset').on('click', function () {
+       location.reload();
+  })
+
+
   form.on("submit", function(event) {
     event.preventDefault();
 
@@ -29,26 +34,29 @@ function getLicenseData(formData) {
       if(data.length <=0) {
         console.log("No Data");
         // show the alert warning-alert
-        $("#warning-alert").toggleClass("hidden")
+        $("#warning-alert").removeClass("hidden")
       }
 
 
-      if(data.length > 1) {
+      else if(data.length > 1) {
         for(let i = 0; i < data.length; i++){
           $("#primary_breed").append($('<option>', {value:data[i].primary_breed, text:data[i].primary_breed}));
           $("#zip_code").append($('<option>', {value:data[i].zip_code, text:data[i].zip_code}));
         }
-        $("#extraFilters").toggleClass("hidden");
-        $("#multiple-results").toggleClass("hidden")
+        $("#extraFilters").removeClass("hidden");
+        $("#multiple-results").removeClass("hidden");
+
       } else {
         for(let i = 0; i < data.length; i++) {
         console.log(data)
         $("#license_number").append($('<option>', {value:data[i].license_number, text:data[i].license_number}));
-        $("#license_issue_date").append($('<option>', {value:data[i].license_issue_date, text:data[i].license_issue_date}));
-      }$("#match-results").toggleClass("hidden");
-        $("#extraFiltersTwo").toggleClass("hidden");
-          $("#multiple-results").toggleClass("hidden")
+        $("#license_issue_date").append($('<option>', {value:data[i].license_issue_date, text:data[i].license_issue_date.slice(0,10)}));
+
+        $("#match-results").removeClass("hidden");
+        $("#extraFiltersTwo").removeClass("hidden");
+        $("#multiple-results").addClass("hidden");
       }
+    }
     })
 }
 

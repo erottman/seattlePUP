@@ -7,10 +7,9 @@
     <meta name='description' content="seattle resources for dog owners">
     <meta name="author" content="Erica Rottman">
     <link rel="icon" href="img/guvyzill.jpg">
-    <title>seaPUP</title>
+    <title>seattlePUP-ID</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -41,9 +40,9 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Pet Licensing</a></li>
-              <li><a href="#">License Sales</a></li>
-              <li><a href="#">Off-Leash</a></li>
+              <li><a href="#licenseSearch">Pet Licensing</a></li>
+              <li><a href="#petLicenseSales">License Sales</a></li>
+              <li><a href="#offLeashContainer">Off-Leash</a></li>
             </ul>
           </div>
         </div>
@@ -67,25 +66,25 @@
       <img class="first-slide" src="img/zillabeach.jpg" alt="First slide">
     <div class="container">
       <div class="carousel-caption">
-        <p><a class="btn btn-sm btn-info" href="#" role="button">Pet Licensing</a></p>
+        <p><a class="btn btn-sm btn-info" href="#licenseSearch" role="button">ID Check</a></p>
       </div>
     </div>
   </div>
 
     <div class="item">
-      <img class="second-slide" src="img/guvypic.jpg" alt="Second Slide">
+      <img class="second-slide" src="img/guvysleep.jpg" alt="Second Slide">
     <div class="container">
       <div class="carousel-caption">
-        <p><a class="btn btn-sm btn-info" href="#" role="button">Off-Leash Parks</a></p>
+        <p><a class="btn btn-sm btn-info" href="#petLicenseSales" role="button">License Sales</a></p>
       </div>
     </div>
   </div>
 
   <div class="item">
-    <img class="third-slide" src="img/guvysleep.jpg" alt="Third Slide">
+    <img class="third-slide" src="img/guvypic.jpg" alt="Third Slide">
   <div class="container">
     <div class="carousel-caption">
-      <p><a class="btn btn-sm btn-info" href="#" role="button">Resources</a></p>
+      <p><a class="btn btn-sm btn-info" href="#offLeashContainer" role="button">Off Leash Parks</a></p>
     </div>
   </div>
 </div>
@@ -96,7 +95,7 @@
   <span class="sr-only">Next</span>
 </a>
 
-<a class="right carousel-control" href="#myCarousel" role="button" data-slide="prev">
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
@@ -119,7 +118,7 @@
         <form id="licenseSearch" method="post" class="form-horizontal">
             <div class="form-group">
                 <label for="animal_s_name" class="control-label">Pet Name:</label>
-                    <input type="text" class="form-control" name="animal_s_name" value="Godzilla" id="animal_s_name">
+                    <input type="text" class="form-control" name="animal_s_name" value="Puppy's Name" id="animal_s_name">
 
             </div>
 
@@ -138,38 +137,39 @@
                           <option value="" selected disabled>Please select</option>
                       </select>
                     </div>
+              </div>
 
-                  <div id="extraFiltersTwo" class="hidden">
+              <div id="extraFiltersTwo" class="hidden">
 
                       <div class="form-group">
                           <label for="license_number" class="control-label">License Number:</label>
-                              <select class="form-control" id="license_number" name="license_number">
+                              <select class="form-control glowing-border" id="license_number" name="license_number">
                             </select>
                           </div>
 
                       <div class="form-group">
                           <label for="license_issue_date" class="control-label">Issue Date:</label>
-                              <select class="form-control" id="license_issue_date" name="license_issue_date">
+                              <select class="form-control glowing-border" id="license_issue_date" name="license_issue_date">
 
                             </select>
                         </div>
-                      </div>
-                      </div>
+                  </div>
+
 
             <div class="form-group">
-              <button type="submit" class="btn btn-default">Submit</button>
-            </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button id="reset" type="reset" class="btn btn-default">Clear</button>
+          </div>
         </form>
 
-        <div class="alert alert-warning hidden" id="warning-alert">
-            <p>Looks like you got a fugitive-Click Here to register your puppy today
-            <a href="http://blue.kingcounty.gov/exec/recordslicensing/petlicenses/"></p>
+        <div class="alert alert-danger hidden" id="warning-alert">
+            <p><a href="https://web7.seattle.gov/fas/pets/GettingStarted.aspx">Looks Like You Are Harboring a Fugitive!  Click On This Link to License Your Puppy Today</p>
         </div>
         <div class="alert alert-warning hidden" id="multiple-results">
             Every puppy is unique - but sometimes names are not. Please select a Zip and Breed.
         </div>
 
-        <div class="alert alert-warning hidden" id="match-results">
+        <div class="alert alert-success hidden" id="match-results">
           <p>Your Puppy is Street Legal Let's Hit the Park</p>
         </div>
     </div>
