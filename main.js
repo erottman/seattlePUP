@@ -23,7 +23,7 @@ $().ready(function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
       }
       if ($(element).val() !== null) {
-        $(element).val($(element).val().capitalizeFirstLetter())
+      $(element).val($(element).val().capitalizeFirstLetter())
       }
       return $(element).val() != "";
 
@@ -39,10 +39,6 @@ function getLicenseData(formData) {
   $.get(LICENSE_API_URL, formData, function(data){
   })
   .done(function(data) {
-    // Array.from(new Set(data))
-    // _.uniq([data]);
-    // filter
-
     if(data.length <=0) {
       console.log("No Data");
       $("#warning-alert").removeClass("hidden");
@@ -51,11 +47,9 @@ function getLicenseData(formData) {
 
     }
 
-
     else if(data.length > 1) {
       let zipCodes = [];
       let breeds = [];
-
 
       for(let i = 0; i < data.length; i++){
         var zip = data[i].zip_code;
@@ -66,8 +60,6 @@ function getLicenseData(formData) {
         var breed = data[i].primary_breed;
         if (breeds.indexOf(breed) === -1) {
           breeds.push(breed)
-
-
         }
       }
       var zipSort = zipCodes.sort();
@@ -79,20 +71,14 @@ function getLicenseData(formData) {
         $("#primary_breed").append($('<option>', {value:breedSort[i], text:breedSort[i]}));
       }
 
-
-
       $("#extraFilters").removeClass("hidden");
       $("#multiple-results").removeClass("hidden");
       $(".status-pic").attr("src", 'img/multidog.jpg');
-
-
-
 
     } else {
       for(let i = 0; i < data.length; i++) {
         $("#license_number").append($('<option>', {value:data[i].license_number, text:data[i].license_number}));
         $("#license_issue_date").append($('<option>', {value:data[i].license_issue_date, text:data[i].license_issue_date.slice(0,10)}));
-
         $("#match-results").removeClass("hidden");
         $("#extraFiltersTwo").removeClass("hidden");
         $("#multiple-results").addClass("hidden");
@@ -102,7 +88,6 @@ function getLicenseData(formData) {
     }
   })
 }
-
 
 function getOffLeashAreas() {
   $.get(OFF_LEASH_API_URL, function(data) {
@@ -118,8 +103,6 @@ function getOffLeashAreas() {
     }
   })
 }
-
-
 
 function getLicensingStores() {
   $.get(LICENSE_SALES_API_URL, function(data) {
