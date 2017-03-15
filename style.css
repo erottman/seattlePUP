@@ -1,3 +1,22 @@
+body {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.glowing-borderYellow {
+    background-color: rgb(250, 255, 189);
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+}
+
+.glowing-borderYellow:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+
 .glowing-border {
     border: 2px solid green;
     border-radius: 7px;
@@ -7,4 +26,16 @@
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
+}
+
+
+
+ input#license_number::-webkit-input-placeholder  {
+    color: green;
+    font-weight: bold;
+}
+
+input#license_issue_date::-webkit-input-placeholder  {
+   color: green;
+   font-weight: bold;
 }

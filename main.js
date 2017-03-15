@@ -77,8 +77,9 @@ function getLicenseData(formData) {
 
     } else {
       for(let i = 0; i < data.length; i++) {
-        $("#license_number").append($('<option>', {value:data[i].license_number, text:data[i].license_number}));
-        $("#license_issue_date").append($('<option>', {value:data[i].license_issue_date, text:data[i].license_issue_date.slice(0,10)}));
+        $("#license_number").attr("placeholder", data[i].license_number);
+        $("#license_issue_date").attr("placeholder", data[i].license_issue_date.slice(0,10));
+        // $("#license_issue_date").append($('<option>', {value:data[i].license_issue_date, text:data[i].license_issue_date.slice(0,10)}));
         $("#match-results").removeClass("hidden");
         $("#extraFiltersTwo").removeClass("hidden");
         $("#multiple-results").addClass("hidden");
