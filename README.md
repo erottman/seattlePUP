@@ -1,8 +1,6 @@
 # seattlePUP
 
-Type on the _left_,
-
-This is a [link]()
+![alt tag](img/mainScreen.png)
 
 ## Technologies Used
 
@@ -14,6 +12,6 @@ This is a [link]()
 
 ## Future Development
 
-+  * build in React Native
-+  * RFID scanner capability for microchip
-+  * Database for entering puppy data
+- build in React Native
+- RFID scanner capability for microchip
+- Database for entering puppy data
