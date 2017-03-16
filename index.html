@@ -50,14 +50,12 @@
     </nav>
   </div>
 
-
   <!-- /Navbar ------------------------>
 
   <!-- Carousel ------------------------>
   <div class="container resources">
     <div class="row">
       <div class="col-xs-12">
-
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -102,7 +100,6 @@
       </div>
     </div>
 
-
     <!-- /Carousel ----------------------->
     <!-- License ----------------------->
     <div class="resources">
@@ -127,7 +124,7 @@
                       <form id="licenseSearch" method="post" class="form-horizontal">
                         <div class="form-group">
                           <label for="animal_s_name" class="control-label">Pet Name:</label>
-                          <input type="text" class="form-control" name="animal_s_name" placeholder="Enter Puppy's Name" id="animal_s_name">
+                          <input type="text"  class="form-control" name="animal_s_name" placeholder="Enter Puppy's Name" id="animal_s_name">
                         </div>
 
 
@@ -136,15 +133,15 @@
                           <div class="form-group">
                             <label for="zip_code" class="control-label">Postal Code:</label>
                             <select class="form-control glowing-borderYellow" id="zip_code" name="zip_code">
-                        <option value="" selected disabled>Please select</option>
-                      </select>
+                              <option value="" selected disabled>Please select</option>
+                            </select>
                           </div>
 
                           <div class="form-group">
                             <label for="primary_breed" class="control-label">Breed:</label>
                             <select class="form-control glowing-borderYellow" id="primary_breed" name="primary_breed">
-                        <option value="" selected disabled>Please select</option>
-                      </select>
+                              <option value="" selected disabled>Please select</option>
+                            </select>
                           </div>
                         </div>
 
@@ -159,10 +156,7 @@
                             <label for="license_issue_date" class="control-label">Issue Date:</label>
                             <input id="license_issue_date" type="text" class="form-control glowing-border" name="license_issue_date" placeholder="issue date">
                           </div>
-
                         </div>
-
-
 
                         <div class="form-group">
                           <button type="submit" class="btn btn-primary">Submit</button>
@@ -170,132 +164,128 @@
                         </div>
                       </form>
 
-                      <div class="alert alert-danger hidden" id="warning-alert">
-                        <p><a href="https://web7.seattle.gov/fas/pets/GettingStarted.aspx">Looks Like You Are Harboring a Fugitive!  Click On This Link to License Your Puppy Today</p>
-                  </div>
-                  <div class="alert alert-warning hidden" id="multiple-results">
-                    Every puppy is unique - but names are not. Please select a Postal Code and Breed.
-                  </div>
+                    <div class="alert alert-danger hidden" id="warning-alert">
+                      <p><a href="https://web7.seattle.gov/fas/pets/GettingStarted.aspx">Looks Like You Are Harboring a Fugitive!  Click On This Link to License Your Puppy Today</p>
+                    </div>
 
-                  <div class="alert alert-success hidden" id="match-results">
-                    <p>Your Puppy is Street Legal Let's Hit the Park</p>
-                  </div>
+                    <div class="alert alert-warning hidden" id="multiple-results">
+                      <p>Every puppy is unique - names are not. Select a Postal Code and Breed.</p>
+                    </div>
+
+                    <div class="alert alert-success hidden" id="match-results">
+                      <p>Your Puppy is Street Legal Let's Hit the Park</p>
+                    </div>
                 </div>
-                <div>
-              </div>
-
+              <div>
             </div>
+
           </div>
         </div>
       </div>
+    </div>
 
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingTwo">
-            <h4 class="panel-title">
-              <a class="collapsed" id="licenseSale" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                License Sales
-              </a>
-                          </h4>
-                      </div>
-                      <div id="collapseTwo" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body ">
-                          <div class="col-sm-12 text-center" id="petLicenseSales">
-                          </div>
+                          <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                                <a class="collapsed" id="licenseSale" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  License Sales
+                                </a>
+                              </h4>
+                    </div>
 
+                    <div id="collapseTwo" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body ">
+                        <div class="col-sm-12 text-center" id="petLicenseSales">
                         </div>
                       </div>
                     </div>
-                    <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title">
-              <a class="collapsed" id="offLeashNav" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Off Leash Parks
-              </a>
-            </h4>
-                      </div>
-                      <div id="collapseThree" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                          <div class="col-xs-12 text-center" id="offLeashContainer">
-                          </div>
+                  </div>
 
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                              <a class="collapsed" id="offLeashNav" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Off Leash Parks
+                              </a>
+                            </h4>
+                    </div>
+
+                    <div id="collapseThree" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        <div class="col-xs-12 text-center" id="offLeashContainer">
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingFour">
-                        <h4 class="panel-title">
-            <a class="collapsed" id="petFinder" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Lost Puppy Finder
-            </a>
-          </h4>
-                      </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                      <h4 class="panel-title">
+                              <a class="collapsed" id="petFinder" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Lost Puppy Finder
+                              </a>
+                            </h4>
+                    </div>
+
                       <div id="collapseFour" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingFour">
                         <div class="panel-body">
                           <div class="col-xs-12 text-center" id="petChipScanner">
                           </div>
 
-                          <div class="col-sm-12 text-center">
-                            <img class="img-circle" src="img/RFID.jpg" alt="petChipScanner" width="140" height="140">
+                      <div class="col-sm-12 text-center">
+                        <img class="img-circle" src="img/RFID.jpg" alt="petChipScanner" width="140" height="140">
 
-
-                            <form id="petChipScanner" method="post" class="form-horizontal">
-                              <div class="form-group">
-                                <label for="microchipScan" class="control-label">Microchip Scan:</label>
+                          <form id="petChipScanner" method="post" class="form-horizontal">
+                            <div class="form-group">
+                              <label for="microchipScan" class="control-label">Microchip Scan:</label>
                                 <input type="text" class="form-control" name="microchipScan" placeholder="Microchip Scan" id="microchipScan">
+                            </div>
 
-                              </div>
+                            <div class="form-group">
+                              <label for="animalsname" class="control-label">Pet Name:</label>
+                              <input type="text" class="form-control" name="animalsname" placeholder="Microchip Scan Return" id="animalsname">
+                            </div>
 
-                              <div class="form-group">
-                                <label for="animalsname" class="control-label">Pet Name:</label>
-                                <input type="text" class="form-control" name="animalsname" placeholder="Microchip Scan Return" id="animalsname">
-
-                              </div>
-
-                              <div class="form-group">
-                                <label for="phone" class="control-label">Phone:</label>
-                                <input type="text" class="form-control" name="phone" placeholder="Microchip Scan Return" id="phone">
-
-                              </div>
-
-                              <div class="form-group">
-                                <label for="address" class="control-label">Address:</label>
-                                <input type="text" class="form-control" name="address" placeholder="Microchip Scan Return" id="address">
-
-                              </div>
-
-                              <div class="form-group">
-                                <label for="licenseNumber" class="control-label">License Number:</label>
-                                <input type="text" class="form-control" name="licenseNumber" placeholder="Microchip Scan Return" id="licNumber">
-
-                              </div>
-
-                              <div class="form-group">
-                                <label for="address" class="control-label">Issue Date:</label>
-                                <input type="text" class="form-control" name="issueDate" placeholder="Microchip Scan Return" id="IssDate">
-
-                              </div>
-                            </form>
-
+                          <div class="form-group">
+                            <label for="phone" class="control-label">Phone:</label>
+                            <input type="text" class="form-control" name="phone" placeholder="Microchip Scan Return" id="phone">
                           </div>
-                        </div>
+
+
+                          <div class="form-group">
+                            <label for="address" class="control-label">Address:</label>
+                            <input type="text" class="form-control" name="address" placeholder="Microchip Scan Return" id="address">
+                          </div>
+
+
+                      <div class="form-group">
+                        <label for="licenseNumber" class="control-label">License Number:</label>
+                        <input type="text" class="form-control" name="licenseNumber" placeholder="Microchip Scan Return" id="licNumber">
                       </div>
-                    </div>
+
+
+                      <div class="form-group">
+                        <label for="address" class="control-label">Issue Date:</label>
+                        <input type="text" class="form-control" name="issueDate" placeholder="Microchip Scan Return" id="IssDate">
+
                   </div>
-                </div>
+                </form>
+
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
               <!-- footer ----------------------->
-              <footer>
-                <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2017 seattlePUP-ID, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-              </footer>
-
+  <footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017 seattlePUP-ID, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
 
               <!-- /footer ----------------------->
-
-
-
 </body>
 
 </html>

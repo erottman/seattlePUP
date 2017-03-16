@@ -3,7 +3,6 @@ const OFF_LEASH_API_URL="https://data.seattle.gov/resource/5tqj-tg8y.json"
 const LICENSE_SALES_API_URL="https://data.seattle.gov/resource/yef9-cfuw.json"
 
 
-
 $().ready(function() {
 
   let form = $("#licenseSearch");
@@ -11,6 +10,7 @@ $().ready(function() {
   getLicensingStores();
   $('#reset').on('click', function () {
     location.reload();
+
   })
 
   form.on("submit", function(event) {
@@ -43,6 +43,7 @@ function getLicenseData(formData) {
       console.log("No Data");
       $("#warning-alert").removeClass("hidden");
       $("#multiple-results").addClass("hidden");
+      $("#match-results").addClass("hidden");
       $(".status-pic").attr("src", 'img/police.jpg');
 
     }
@@ -72,7 +73,9 @@ function getLicenseData(formData) {
       }
 
       $("#extraFilters").removeClass("hidden");
+      $("#warning-alert").addClass("hidden");
       $("#multiple-results").removeClass("hidden");
+      $("#match-results").addClass("hidden");
       $(".status-pic").attr("src", 'img/multidog.jpg');
 
     } else {
@@ -127,6 +130,11 @@ $(document).on('click','.navbar-collapse.in',function(event) {
         $('.interactive').collapse('hide');
         $($(event.target).attr('href')).collapse('show');
 
-        // $($(event.target).attr('href')).removeClass('collapse').addClass('collapse-in');
     }
+});
+
+$(function (){
+    $(document).on("focus", "input:text", function() {
+        $(this).select();
+    });
 });
