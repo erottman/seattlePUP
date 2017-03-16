@@ -28,7 +28,6 @@
     <div class="container">
 
       <nav class="navbar navbar-inverse navbar-fixed-top">
-        <!-- <div class="container"> -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -41,16 +40,14 @@
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">About</a></li>
-            <li><a href="#licenseNav">Pet Licensing</a></li>
-            <li><a href="#licenseSale">License Sales</a></li>
-            <li><a href="#offLeashNav">Off-Leash</a></li>
-            <li><a href="#petFinder">Lost Pet Finder</a></li>
+            <li class="active"><a href="#collapseOne">Puppy ID Check</a></li>
+            <li><a href="#collapseTwo">License Sales</a></li>
+            <li><a href="#collapseThree">Off-Leash</a></li>
+            <li><a href="#collapseFour">Lost Pet Finder</a></li>
           </ul>
         </div>
     </div>
     </nav>
-    <!-- </div> -->
   </div>
 
 
@@ -72,29 +69,23 @@
           <div class="carousel-inner" role="listbox">
             <div class="item active">
               <img class="first-slide" src="img/zillabeach.jpg" alt="First slide">
-              <!-- <div class="container-fluid"> -->
               <div class="carousel-caption">
                 <p><a class="btn btn-sm btn-info" href="#licenseSearch" role="button">ID Check</a></p>
               </div>
-              <!-- </div> -->
             </div>
 
             <div class="item">
               <img class="second-slide" src="img/guvysleep.jpg" alt="Second Slide">
-              <!-- <div class="container"> -->
               <div class="carousel-caption">
                 <p><a class="btn btn-sm btn-info" href="#petLicenseSales" role="button">License Sales</a></p>
               </div>
-              <!-- </div> -->
             </div>
 
             <div class="item">
               <img class="third-slide" src="img/guvypic.jpg" alt="Third Slide">
-              <!-- <div class="container"> -->
               <div class="carousel-caption">
                 <p><a class="btn btn-sm btn-info" href="#offLeashContainer" role="button">Off Leash Parks</a></p>
               </div>
-              <!-- </div> -->
             </div>
           </div>
 
@@ -126,8 +117,8 @@
               </a>
             </h4>
               </div>
-              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
+              <div id="collapseOne" class="panel-collapse collapse in interactive" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body ">
                   <div class="row">
                     <div class="col-sm-12 text-center">
                       <img class="img-circle status-pic" src="img/dogLicense.jpg" alt="License Check" width="140" height="140">
@@ -137,7 +128,7 @@
                         <div class="form-group">
                           <label for="animal_s_name" class="control-label">Pet Name:</label>
                           <input type="text" class="form-control" name="animal_s_name" placeholder="Enter Puppy's Name" id="animal_s_name">
-                          </div>
+                        </div>
 
 
                         <div id="extraFilters" class="hidden">
@@ -161,7 +152,7 @@
 
                           <div class="form-group">
                             <label for="license_number" class="control-label">License Number:</label>
-                            <input id="license_number" type="text" class="form-control glowing-border" name="license_number" placeholder="license name" >
+                            <input id="license_number" type="text" class="form-control glowing-border" name="license_number" placeholder="license name">
                           </div>
 
                           <div class="form-group">
@@ -169,7 +160,7 @@
                             <input id="license_issue_date" type="text" class="form-control glowing-border" name="license_issue_date" placeholder="issue date">
                           </div>
 
-                          </div>
+                        </div>
 
 
 
@@ -206,8 +197,8 @@
               </a>
                           </h4>
                       </div>
-                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
+                      <div id="collapseTwo" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body ">
                           <div class="col-sm-12 text-center" id="petLicenseSales">
                           </div>
 
@@ -222,7 +213,7 @@
               </a>
             </h4>
                       </div>
-                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div id="collapseThree" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingThree">
                         <div class="panel-body">
                           <div class="col-xs-12 text-center" id="offLeashContainer">
                           </div>
@@ -239,7 +230,7 @@
             </a>
           </h4>
                       </div>
-                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                      <div id="collapseFour" class="panel-collapse collapse interactive" role="tabpanel" aria-labelledby="headingFour">
                         <div class="panel-body">
                           <div class="col-xs-12 text-center" id="petChipScanner">
                           </div>

@@ -29,7 +29,6 @@ body {
 }
 
 
-
  input#license_number::-webkit-input-placeholder  {
     color: green;
     font-weight: bold;

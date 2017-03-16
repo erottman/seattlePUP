@@ -119,3 +119,14 @@ function getLicensingStores() {
     }
   })
 }
+
+$(document).on('click','.navbar-collapse.in',function(event) {
+    if( $(event.target).is('a') ) {
+      console.log($(event.target).attr('href'));
+        $(this).collapse('hide');
+        $('.interactive').collapse('hide');
+        $($(event.target).attr('href')).collapse('show');
+
+        // $($(event.target).attr('href')).removeClass('collapse').addClass('collapse-in');
+    }
+});
