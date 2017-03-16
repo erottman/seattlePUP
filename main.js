@@ -102,7 +102,7 @@ function getOffLeashAreas() {
     for(let i = 0; i < data.length; i++) {
       $("#offLeashContainer").append('<address><strong>'+ data[i].common_name+'</strong><br>'
       + data[i].address + '<br>'
-      + data[i].website.url + '<br><a href="https://www.google.com/maps/preview/@'
+      + data[i].website.url + '<br><a href="http://maps.google.com/maps?&z=15&mrt=yp&t=k&q='
       + data[i].latitude +','+ data[i].longitude +'" target="_blank">Map</a></address>')
     }
   })
@@ -117,7 +117,7 @@ function getLicensingStores() {
     for(let i = 0; i < data.length; i++) {
       $("#petLicenseSales").append('<address><strong>'+ data[i].common_name+'</strong><br>'
       + data[i].address + '<br>'
-      + data[i].website.url + '<br><a href="https://www.google.com/maps/preview/@'
+      + data[i].website.url + '<br><a href="http://maps.google.com/maps?&z=15&mrt=yp&t=k&q='
       + data[i].latitude +','+ data[i].longitude +'" target="_blank">Map</a></address>')
     }
   })
