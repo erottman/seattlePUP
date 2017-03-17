@@ -30,7 +30,6 @@ $().ready(function() {
     })
     .serialize();
     getLicenseData(formData);
-    console.log(formData);
 
   })
 });
@@ -40,7 +39,6 @@ function getLicenseData(formData) {
   })
   .done(function(data) {
     if(data.length <=0) {
-      console.log("No Data");
       $("#warning-alert").removeClass("hidden");
       $("#multiple-results").addClass("hidden");
       $("#match-results").addClass("hidden");
@@ -112,7 +110,6 @@ function getLicensingStores() {
 
   })
   .done(function(data){
-    console.log(data)
     for(let i = 0; i < data.length; i++) {
       $("#petLicenseSales").append('<address><strong>'+ data[i].common_name+'</strong><br>'
       + data[i].address + '<br>'
@@ -124,7 +121,6 @@ function getLicensingStores() {
 
 $(document).on('click','.navbar-collapse.in',function(event) {
     if( $(event.target).is('a') ) {
-      console.log($(event.target).attr('href'));
         $(this).collapse('hide');
         $('.interactive').collapse('hide');
         $($(event.target).attr('href')).collapse('show');
@@ -136,4 +132,14 @@ $(function (){
     $(document).on("focus", "input:text", function() {
         $(this).select();
     });
+});
+
+
+$('.btn-info').on('click',function(event) {
+    if( $(event.target).is('a') ) {
+        $(this).collapse('hide');
+        $('.interactive').collapse('hide');
+        $($(event.target).attr('href')).collapse('show');
+
+    }
 });
